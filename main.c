@@ -12,10 +12,10 @@ int main(int argc, char **agrv){
 
     int totalNum = 10;
     int arrData[totalNum] ;
-    createRadomArray(arrData,totalNum,-20,20);
+    createRadomArray(arrData,totalNum,1,30);
     printIntArray(arrData,totalNum);    //打印数组
 
-    insertSort(arrData,totalNum);
+    shellSort(arrData,totalNum);
     printf("排序之后的数组是：\n");
     printIntArray(arrData,totalNum);
 

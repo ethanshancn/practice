@@ -23,4 +23,17 @@ void shellSort(int array[], int totalNum){
     int i, j, increament;
     int tmp;
 
+    for(increament = (int)(totalNum/2);increament > 0 ; increament = (int)(increament/2)){
+        for (int i = increament; i < totalNum; ++i) {
+            tmp = array[i];
+            for (int j = i; j >= increament; j -= increament) {
+                if(tmp < array[j-increament]){
+                    array[j] = array[j-increament];
+                }else{
+                    break;
+                }
+            }
+            array[j] = tmp;
+        }
+    }
 }
