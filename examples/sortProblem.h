@@ -12,3 +12,4 @@
 #endif //PRACTICE_SORTPROBLEM_H
 
 void insertSort(int array[], int totalNum);
+
