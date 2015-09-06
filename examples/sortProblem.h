@@ -12,3 +12,5 @@
 #endif //PRACTICE_SORTPROBLEM_H
 
 void insertSort(int array[], int totalNum);
+
+void shellSort(int array[], int totalNum);

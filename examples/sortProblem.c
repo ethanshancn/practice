@@ -18,3 +18,9 @@ void insertSort(int array[], int totalNum){
         array[j] = tmp;
     }
 }
+
+void shellSort(int array[], int totalNum){
+    int i, j, increament;
+    int tmp;
+
+}
