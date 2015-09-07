@@ -37,3 +37,36 @@ void shellSort(int array[], int totalNum){
         }
     }
 }
+
+//建立最大堆，该堆从0索引开始,父节点总比子节点大
+void buildMaxHeap(int array[],int i, int totalNum){
+    int child;
+    int tmp;
+
+    for (tmp = array[i]; (2 * i +1) < totalNum; i = child) {
+        child = 2 * i +1;
+        if(child != totalNum-1 && array[child+1]>array[child]){
+            child ++;
+        }
+        if(array[child] > tmp){
+            array[i] = array[child];
+        }else{
+            break;
+        }
+    }
+    array[i] = tmp;
+}
+
+void heapSort(int array[], int totalNum){
+    int i;
+
+    for (i = (int)(totalNum / 2); i >= 0; i--) {
+        buildMaxHeap(array,i,totalNum);
+    }
+    for (i = totalNum - 1; i > 0; --i) {
+        swapArrayVal(&array[0],&array[i]);
+        buildMaxHeap(array,0,i);
+    }
+
+
+}

@@ -9,8 +9,12 @@
 #ifndef PRACTICE_SORTPROBLEM_H
 #define PRACTICE_SORTPROBLEM_H
 
+#include "../lib/swapVariables.h"
+
 #endif //PRACTICE_SORTPROBLEM_H
 
 void insertSort(int array[], int totalNum);
 
 void shellSort(int array[], int totalNum);
+
+void heapSort(int array[], int totalNum);
