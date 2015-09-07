@@ -69,7 +69,7 @@ void heapSort(int array[], int totalNum){
     }
 }
 
-void mSort(){
+void mSort(int array[], int tmpArray[],int left, int right){
 
 }
 
