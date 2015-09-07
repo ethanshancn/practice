@@ -18,3 +18,5 @@ void insertSort(int array[], int totalNum);
 void shellSort(int array[], int totalNum);
 
 void heapSort(int array[], int totalNum);
+
+void mergeSort(int array[], int totalNum);

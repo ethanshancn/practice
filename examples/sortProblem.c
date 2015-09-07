@@ -67,6 +67,12 @@ void heapSort(int array[], int totalNum){
         swapArrayVal(&array[0],&array[i]);
         buildMaxHeap(array,0,i);
     }
+}
 
+void mSort(){
+
+}
+
+void mergeSort(int array[], int totalNum){
 
 }
