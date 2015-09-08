@@ -70,7 +70,7 @@ void heapSort(int array[], int totalNum){
 }
 
 void mSort(int array[], int tmpArray[],int left, int right){
-
+    //测试
 }
 
 void mergeSort(int array[], int totalNum){
