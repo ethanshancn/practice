@@ -15,7 +15,7 @@ int main(int argc, char **agrv){
     createRadomArray(arrData,totalNum,1,30);
     printIntArray(arrData,totalNum);    //打印数组
 
-    mergeSort(arrData,totalNum);
+    quickSort(arrData,totalNum);
     printf("After array sort:\n");
     printIntArray(arrData,totalNum);
 
