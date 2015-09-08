@@ -9,11 +9,11 @@
 #include "printArray.h"
 void printIntArray(int array[], int totalNum){
     if(totalNum <= 0 ){
-        printf("数组长度传递错误!\n");
+        printf("Error in array length!\n");
         return;
     }
     int i = 0;
-    printf("当前数组为：\n");
+    printf("The array is :\n");
     while (i < totalNum){
         printf("key:%d, value:%d \n",i,array[i]);
         i++;
