@@ -10,14 +10,17 @@
 
 int main(int argc, char **agrv){
 
-    int totalNum = 100;
+    int totalNum = 10;
     int arrData[totalNum] ;
-    createRadomArray(arrData,totalNum,1,3000);
+    createRadomArray(arrData,totalNum,1,30);
     printIntArray(arrData,totalNum);    //打印数组
 
     quickSort(arrData,totalNum);
     printf("After array sort:\n");
     printIntArray(arrData,totalNum);
+
+    int key = binarySearch(arrData,totalNum,arrData[4]);
+    printf("The key is : %d\n",key);
 
     return 0;
 }

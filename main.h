@@ -15,5 +15,6 @@
 
 #include "./examples/maxSubSequenceSum.h"   /*最大子序列和*/
 #include "./examples/sortProblem.h" /*排序问题*/
+#include "./examples/searchProblem.h"   /*搜索问题*/
 
 #endif //PRACTICE_MAIN_H
