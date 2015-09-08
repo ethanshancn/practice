@@ -10,9 +10,9 @@
 
 int main(int argc, char **agrv){
 
-    int totalNum = 10;
+    int totalNum = 100;
     int arrData[totalNum] ;
-    createRadomArray(arrData,totalNum,1,30);
+    createRadomArray(arrData,totalNum,1,3000);
     printIntArray(arrData,totalNum);    //打印数组
 
     quickSort(arrData,totalNum);

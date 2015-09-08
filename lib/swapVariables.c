@@ -9,7 +9,7 @@
 #include "swapVariables.h"
 
 void swapArrayVal(int *paramA, int *paramB){
-    *paramA = *paramA + *paramB;
-    *paramB = *paramA - *paramB;
-    *paramA = *paramA - *paramB;
+    int tmp = *paramA;
+    *paramA = *paramB;
+    *paramB = tmp;
 }
