@@ -9,6 +9,6 @@
 #ifndef PRACTICE_SEARCHPROBLEM_H
 #define PRACTICE_SEARCHPROBLEM_H
 
-#endif //PRACTICE_SEARCHPROBLEM_H
-
 int binarySearch(int array[],int totalNum, int find);
+
+#endif //PRACTICE_SEARCHPROBLEM_H

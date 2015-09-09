@@ -9,6 +9,6 @@
 #ifndef PRACTICE_SWAPVARIABLES_H
 #define PRACTICE_SWAPVARIABLES_H
 
-#endif //PRACTICE_SWAPVARIABLES_H
-
 void swapArrayVal(int *paramA, int *paramB);
+
+#endif //PRACTICE_SWAPVARIABLES_H

@@ -9,6 +9,6 @@
 #ifndef PRACTICE_GCD_H
 #define PRACTICE_GCD_H
 
-#endif //PRACTICE_GCD_H
-
 unsigned int gcd(unsigned int paramA, unsigned int paramB);
+
+#endif //PRACTICE_GCD_H

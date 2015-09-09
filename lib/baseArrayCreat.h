@@ -29,11 +29,11 @@
 #include <time.h>
 #include <stdint.h>
 
-#endif //PRACTICE_BASEARRAYPRO_H
-
 //随机数发生种子
 static unsigned long baseRandomSeed = 1;
 //生成某一区间中的随即数
 int creatRandomInt(int min, int max);
 //生成指定大小的随机正整数数组
 int createRadomArray(int *array,int totalNum, int min, int max);
+
+#endif //PRACTICE_BASEARRAYPRO_H

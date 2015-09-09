@@ -9,5 +9,6 @@
 #ifndef PRACTICE_MAXSUBSEQUENCESUM_H
 #define PRACTICE_MAXSUBSEQUENCESUM_H
 
-#endif //PRACTICE_MAXSUBSEQUENCESUM_H
 int maxSubSequenceSum(int array[], int totalNum);
+
+#endif //PRACTICE_MAXSUBSEQUENCESUM_H

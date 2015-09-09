@@ -11,6 +11,6 @@
 
 #include <stdio.h>
 
-#endif //PRACTICE_PRINTARRAY_H
-
 void printIntArray(int array[], int totalNum);
+
+#endif //PRACTICE_PRINTARRAY_H
