@@ -62,7 +62,7 @@ void insert(elementType newContent, list exList, position periousPos){
     position tmp;
     tmp = malloc(sizeof(struct node));
     if(tmp == NULL){
-        fprintf(stderr,"%s,%s,%d : Out of space!!\n",__FILE__,__FUNCTION__,__LINE__);
+        fprintf(stderr,"%s,%s,%d :Out of space!!\n",__FILE__,__FUNCTION__,__LINE__);
     }
     tmp->element = newContent;
     tmp->next = periousPos->next;
