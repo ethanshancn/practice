@@ -9,13 +9,15 @@
 #ifndef PRACTICE_LIST_H
 #define PRACTICE_LIST_H
 
+#include <stdlib.h>
+
 struct node;
 typedef struct node *ptrToNode;
 typedef ptrToNode list;
 typedef ptrToNode position;
 typedef int elementType;
 
-list makeEmpty(list exList);
+void makeEmpty(list exList);
 int isEmpty (list exList);
 int isLast (position exPosition, list exList);
 position find(elementType nodeContent,list exList);
