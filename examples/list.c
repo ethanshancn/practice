@@ -62,7 +62,7 @@ void insert(elementType newContent, list exList, position periousPos){
     position tmp;
     tmp = malloc(sizeof(struct node));
     if(tmp == NULL){
-
+        fprintf(stderr,"%s,%s,%d : Out of space!!\n",__FILE__,__FUNCTION__,__LINE__);
     }
     tmp->element = newContent;
     tmp->next = periousPos->next;
@@ -70,21 +70,28 @@ void insert(elementType newContent, list exList, position periousPos){
 }
 
 void deleteList(list exList){
-
+    position nowDelete,tmp;
+    nowDelete = exList->next;
+    exList->next = NULL;
+    while (nowDelete != NULL){
+        tmp = nowDelete->next
+        free(nowDelete);
+        nowDelete = tmp;
+    }
 }
 
 position header(list exList){
-
+    return exList;
 }
 
 position first(list exList){
-
+    return exList->next;
 }
 
 position advance(position exPositon){
-
+    return exPositon->next;
 }
 
 elementType retrieve(position exPosition){
-
+    return exPosition->element;
 }

@@ -9,7 +9,9 @@
 #ifndef PRACTICE_LIST_H
 #define PRACTICE_LIST_H
 
+#include <stdio.h>
 #include <stdlib.h>
+#include <error.h>
 
 struct node;
 typedef struct node *ptrToNode;
@@ -27,7 +29,7 @@ void insert(elementType newContent, list exList, position periousPos);
 void deleteList(list exList);
 position header(list exList);
 position first(list exList);
-position advance(position exPositon);
+position advance(position exPositon);   //获取下一子节点
 elementType retrieve(position exPosition);
 
 #endif //PRACTICE_LIST_H
