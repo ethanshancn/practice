@@ -74,7 +74,7 @@ void deleteList(list exList){
     nowDelete = exList->next;
     exList->next = NULL;
     while (nowDelete != NULL){
-        tmp = nowDelete->next
+        tmp = nowDelete->next;
         free(nowDelete);
         nowDelete = tmp;
     }
