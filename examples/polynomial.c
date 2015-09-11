@@ -50,9 +50,53 @@ polynomial addPolynomial(const polynomial polyA, const polynomial polyB){
     return polySum;
 }
 
+//合并同类项
+void mergeSameExp (polynomial poly){
+    int changedTimes = 0;
+    polynomial tmpNowNode,tmpOtherNode,tmpOtherLastNode;
+
+    tmpNowNode = poly;
+    while (tmpNowNode != NULL){
+        tmpOtherNode = tmpNowNode->next;
+        tmpOtherLastNode = tmpNowNode;
+
+        while (tmpOtherNode != NULL){
+            if(tmpNowNode->exponent == tmpOtherNode->exponent){
+                tmpNowNode->exponent += tmpOtherNode->exponent;
+                tmpOtherLastNode->next = tmpOtherNode->next;
+                free(tmpNowNode);
+                changedTimes ++;
+            }else{
+                tmpOtherLastNode = tmpOtherNode;
+            }
+            tmpOtherNode = tmpOtherLastNode->next;
+        }
+
+        tmpNowNode = tmpNowNode->next;
+    }
+
+    if(changedTimes > 0){
+        mergeSameExp(poly);
+    }
+}
+
 //此处两个多项式指数已经按照从大到小的顺序进行了排序
 polynomial multPolynomial(const polynomial polyA, const polynomial polyB){
+    polynomial polyMult = NULL,tmpA,tmpB,tmpNowNode,tmpLastNode;
 
+    for(tmpA = polyA; tmpA != NULL; tmpA = tmpA->next){
+        for(tmpB = polyB;tmpB != NULL; tmpB = tmpB->next){
+            tmpNowNode = newPolynomial(tmpA->coefficient * tmpB->coefficient,tmpA->exponent + tmpB->exponent);
+            if (polyMult == NULL){
+                polyMult = tmpNowNode;
+            }else{
+                tmpLastNode->next = tmpNowNode;
+            }
+            tmpLastNode = tmpNowNode;
+        }
+    }
+    mergeSameExp(polyMult);
+    return polyMult;
 }
 
 void printPolynomial(polynomial poly){
