@@ -62,7 +62,7 @@ void mergeSameExp (polynomial poly){
 
         while (tmpOtherNode != NULL){
             if(tmpNowNode->exponent == tmpOtherNode->exponent){
-                tmpNowNode->exponent += tmpOtherNode->exponent;
+                tmpNowNode->coefficient += tmpOtherNode->coefficient;
                 tmpOtherLastNode->next = tmpOtherNode->next;
                 free(tmpNowNode);
                 changedTimes ++;
@@ -95,6 +95,7 @@ polynomial multPolynomial(const polynomial polyA, const polynomial polyB){
             tmpLastNode = tmpNowNode;
         }
     }
+
     mergeSameExp(polyMult);
     return polyMult;
 }
@@ -107,6 +108,9 @@ void printPolynomial(polynomial poly){
 }
 
 void freePolynomial(polynomial poly){
+    if(poly == NULL){
+        return;
+    }
     if(poly->next != NULL){
         freePolynomial(poly->next);
     }
