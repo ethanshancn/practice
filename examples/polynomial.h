@@ -12,7 +12,9 @@ struct polyNode;
 typedef struct polyNode *polyPtrToNode;
 typedef polyPtrToNode polynomial;
 
-void zeroPolynomial(polynomial poly);
+void initPolynomial(polynomial poly);
+
+polynomial newPolynomial (int coefficient, int exponent);
 
 void addPolynomial(const polynomial poly1, const polynomial poly2, const polynomial polySum);
 
@@ -24,6 +26,6 @@ void printPolynomial(polynomial poly);
 
 struct polyNode{
     int coefficient;    //系数
-    int exponent;
+    int exponent;   //指数
     polyPtrToNode next;
 };

@@ -4,16 +4,24 @@
 
 #include "polynomial.h"
 
-void zeroPolynomial(polynomial poly){
+void initPolynomial(polynomial poly){
     poly->exponent = 0;
     poly->coefficient = 0;
     if(poly->next != NULL){
-        zeroPolynomial(poly->next);
+        initPolynomial(poly->next);
+        free(poly->next);
     }
-    poly->next = NULL;
+}
+
+polynomial newPolynomial (int coefficient, int exponent){
+
 }
 
 void addPolynomial(const polynomial poly1, const polynomial poly2, const polynomial polySum){
+
+
+
+
 
 }
 
