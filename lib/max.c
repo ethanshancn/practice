@@ -9,5 +9,6 @@
 #include "max.h"
 
 int maxInt(int paramA, int paramB){
-    reurn (paramA > paramB) ? paramA : paramB;
+    int result = (paramA > paramB) ? paramA : paramB;
+    return result;
 }

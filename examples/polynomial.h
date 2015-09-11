@@ -17,7 +17,7 @@ polynomial newPolynomial (int coefficient, int exponent);
 
 polynomial addPolynomial(const polynomial polyA, const polynomial polyB);
 
-polynomial multPolynomial(const polynomial polyB, const polynomial polyB);
+polynomial multPolynomial(const polynomial polyA, const polynomial polyB);
 
 void printPolynomial(polynomial poly);
 
