@@ -7,20 +7,21 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "../lib/max.h"
 
 struct polyNode;
 typedef struct polyNode *polyPtrToNode;
 typedef polyPtrToNode polynomial;
 
-void initPolynomial(polynomial poly);
-
 polynomial newPolynomial (int coefficient, int exponent);
 
-void addPolynomial(const polynomial poly1, const polynomial poly2, const polynomial polySum);
+polynomial addPolynomial(const polynomial polyA, const polynomial polyB);
 
-void multPolynomial(const polynomial poly1, const polynomial poly2, const polynomial polyMult);
+polynomial multPolynomial(const polynomial polyB, const polynomial polyB);
 
 void printPolynomial(polynomial poly);
+
+void freePolynomial(polynomial poly);
 
 #endif //PRACTICE_POLYNOMIAL_H
 
