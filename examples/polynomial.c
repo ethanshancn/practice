@@ -5,7 +5,12 @@
 #include "polynomial.h"
 
 void zeroPolynomial(polynomial poly){
-
+    poly->exponent = 0;
+    poly->coefficient = 0;
+    if(poly->next != NULL){
+        zeroPolynomial(poly->next);
+    }
+    poly->next = NULL;
 }
 
 void addPolynomial(const polynomial poly1, const polynomial poly2, const polynomial polySum){

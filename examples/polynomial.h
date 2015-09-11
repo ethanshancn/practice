@@ -5,6 +5,9 @@
 #ifndef PRACTICE_POLYNOMIAL_H
 #define PRACTICE_POLYNOMIAL_H
 
+#include <stdio.h>
+#include <stdlib.h>
+
 struct polyNode;
 typedef struct polyNode *polyPtrToNode;
 typedef polyPtrToNode polynomial;
