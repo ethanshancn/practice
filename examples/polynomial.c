@@ -100,9 +100,15 @@ polynomial multPolynomial(const polynomial polyA, const polynomial polyB){
 }
 
 void printPolynomial(polynomial poly){
-
+    printf("当前项的系数是：%d ,当前项的指数是：%d \n",poly->coefficient,poly->exponent);
+    if(poly->next != NULL){
+        printPolynomial(poly->next);
+    }
 }
 
 void freePolynomial(polynomial poly){
-
+    if(poly->next != NULL){
+        freePolynomial(poly->next);
+    }
+    free(poly);
 }
