@@ -7,3 +7,30 @@
 //
 
 #include "searchTree.h"
+
+searchTree makeEmpty(searchTree T){
+
+}
+
+position find(searchTree T, elementType X){
+
+}
+
+position findMin(searchTree T){
+
+}
+
+position findMax(searchTree T){
+
+}
+
+searchTree insert(elementType X, searchTree T){
+
+}
+
+searchTree delete(elementType X, searchTree T){
+
+}
+elementType retrieve(position P){
+
+}
