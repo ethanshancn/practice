@@ -11,7 +11,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <errno.h>
 
 struct node;
 typedef struct node *ptrToNode;

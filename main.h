@@ -14,9 +14,11 @@
 #include "./lib/printArray.h"
 #include "./lib/gcd.h"
 
-#include "./examples/maxSubSequenceSum.h"   /*最大子序列和*/
-#include "./examples/sortProblem.h" /*排序问题*/
-#include "./examples/searchProblem.h"   /*搜索问题*/
-#include "./examples/polynomial.h"  /*多项式问题 */
+//#include "./examples/maxSubSequenceSum.h"   /*最大子序列和*/
+//#include "./examples/sortProblem.h" /*排序问题*/
+//#include "./examples/searchProblem.h"   /*搜索问题*/
+//#include "./examples/polynomial.h"  /*多项式问题 */
+#include "./examples/stackList.h"   //栈的链表实现
+
 
 #endif //PRACTICE_MAIN_H
