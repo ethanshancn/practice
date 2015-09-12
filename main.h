@@ -18,7 +18,7 @@
 //#include "./examples/sortProblem.h" /*排序问题*/
 //#include "./examples/searchProblem.h"   /*搜索问题*/
 //#include "./examples/polynomial.h"  /*多项式问题 */
-#include "./examples/stackList.h"   //栈的链表实现
-
+//#include "./examples/stackList.h"   //栈的链表实现
+#include "./examples/stackArray.h"  //栈的数组实现
 
 #endif //PRACTICE_MAIN_H
