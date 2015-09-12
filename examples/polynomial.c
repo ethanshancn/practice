@@ -101,9 +101,10 @@ polynomial multPolynomial(const polynomial polyA, const polynomial polyB){
 }
 
 void printPolynomial(polynomial poly){
-    printf("当前项的系数是：%d ,当前项的指数是：%d \n",poly->coefficient,poly->exponent);
-    if(poly->next != NULL){
-        printPolynomial(poly->next);
+    polynomial tmpCell = poly;
+    while (tmpCell != NULL){
+        printf("当前项的系数是：%d ,当前项的指数是：%d \n",tmpCell->coefficient,tmpCell->exponent);
+        tmpCell = tmpCell->next;
     }
 }
 
