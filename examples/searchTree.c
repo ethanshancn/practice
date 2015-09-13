@@ -35,22 +35,16 @@ position findMin(searchTree T){
     if(T == NULL){
         return NULL;
     }
-    if(T->left != NULL){
-        findMin(T->left);
-    }else{
-        return T;
-    }
+    if(T->left != NULL)
+        T = findMin(T->left);
+    return T;
 }
 
 position findMax(searchTree T){
-    if(T == NULL){
-        return NULL;
-    }
-    if(T->right == NULL){
-        return T;
-    }else{
-        findMax(T->right);
-    }
+    if(T != NULL)
+        while (T->right != NULL)
+            T = T->right;
+    return T;
 }
 
 searchTree insert(elementType X, searchTree T){
@@ -80,11 +74,11 @@ searchTree delete(elementType X, searchTree T){
         T->left = delete(X,T->left);
     }else if(X > T->content){
         T->right = delete(X,T->right);
-    }else if(T->left && T->right){  //have two children
+    }else if(T->left && T->right){  //have 2 children
         tmpCell = findMin(T->right);
         T->content = tmpCell->content;
         T->right = delete(T->content,T->right); //递归的去删除右子树中的最小值
-    }else{  //have one child
+    }else{  //have 1 or 0 child
         tmpCell = T;
         if(T->left == NULL)
             T = T->right;
@@ -96,4 +90,29 @@ searchTree delete(elementType X, searchTree T){
 }
 elementType retrieve(position P){
     return P->content;
+}
+
+void printContent(elementType content,int depth){
+    char space[depth+2];
+    int i = 0;
+    while (i < (depth + 1)){
+        space[i] = 0x09;
+        i ++;
+    }
+    space[i] = '\0';
+    printf("%s(%d)节点内容:%d\n",space,depth,content);
+}
+void printT(searchTree T, int depth ){
+    if(T == NULL)
+        return;
+    if(T->right != NULL)
+        printT(T->right,depth+1);
+    printContent(T->content,depth);
+    if(T->left != NULL){
+        printT(T->left,depth+1);
+    }
+}
+
+void printTree(searchTree T){
+    printT(T,0);
 }

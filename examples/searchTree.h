@@ -24,6 +24,7 @@ position findMax(searchTree T);
 searchTree insert(elementType X, searchTree T); //根有可能发生变化
 searchTree delete(elementType X, searchTree T);
 elementType retrieve(position P);
+void printTree(searchTree T);
 
 #endif //PRACTICE_SEARCHTREE_H
 
