@@ -83,8 +83,8 @@ searchTree delete(elementType X, searchTree T){
     }else if(T->left && T->right){  //have two children
         tmpCell = findMin(T->right);
         T->content = tmpCell->content;
-        T->right = delete(T->content,T->right);
-    }else{
+        T->right = delete(T->content,T->right); //递归的去删除右子树中的最小值
+    }else{  //have one child
         tmpCell = T;
         if(T->left == NULL)
             T = T->right;
