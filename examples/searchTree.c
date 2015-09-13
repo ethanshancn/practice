@@ -19,7 +19,7 @@ searchTree makeEmpty(searchTree T){
 
 position find(searchTree T, elementType X){
     if(T == NULL){
-        printf("Tree is NULL");
+        printf("Tree is NULL \n");
         return NULL;
     }
     if(X < T->content){
@@ -67,7 +67,7 @@ searchTree insert(elementType X, searchTree T){
 searchTree delete(elementType X, searchTree T){
     position tmpCell;
     if(T == NULL){
-        printf("Element not found!");
+        printf("Element not found! \n");
         return NULL;
     }
     if(X < T->content){
