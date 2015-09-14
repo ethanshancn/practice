@@ -28,7 +28,7 @@ elementType retrieve(position P);
 #endif //PRACTICE_AVLTREE_H
 
 struct avlNode{
-    elementType element;
+    elementType content;
     avlTree left;
     avlTree right;
     int height;
