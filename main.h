@@ -20,6 +20,7 @@
 //#include "./examples/polynomial.h"  ／／多项式问题
 //#include "./examples/stackList.h"   //栈的链表实现
 //#include "./examples/stackArray.h"  //栈的数组实现
-#include "./examples/searchTree.h"  //二叉查找树
+//#include "./examples/searchTree.h"  //二叉查找树
+#include "./examples/avlTree.h" //AVL树
 
 #endif //PRACTICE_MAIN_H

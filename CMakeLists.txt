@@ -3,5 +3,5 @@ project(practice)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.h main.c lib/baseArrayCreat.c lib/baseArrayCreat.h lib/printArray.c lib/printArray.h lib/swapVariables.c lib/swapVariables.h lib/gcd.c lib/gcd.h lib/max.c lib/max.h examples/searchTree.c examples/searchTree.h)
+set(SOURCE_FILES main.h main.c lib/baseArrayCreat.c lib/baseArrayCreat.h lib/printArray.c lib/printArray.h lib/swapVariables.c lib/swapVariables.h lib/gcd.c lib/gcd.h lib/max.c lib/max.h examples/avlTree.c examples/avlTree.h)
 add_executable(practiceResult ${SOURCE_FILES})
