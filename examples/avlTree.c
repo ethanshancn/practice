@@ -48,6 +48,22 @@ position findMax(avlTree T){
     return T;
 }
 
+static position singleRotateWithLeft(position K2){
+    
+}
+
+static position singleRotateWithRight(position K2){
+
+}
+
+static position doubleRotateWithLeft(position K3){
+
+}
+
+static position doubleRotateWithRight(position K3){
+
+}
+
 avlTree insert(elementType X, avlTree T){
 
 }
