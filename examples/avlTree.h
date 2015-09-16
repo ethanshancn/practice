@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "../lib/max.h"
 
 struct avlNode;
 typedef struct avlNode *position;

@@ -48,20 +48,41 @@ position findMax(avlTree T){
     return T;
 }
 
+static int height(position P){
+    if(P == NULL)
+        return -1;
+    else
+        return P->height;
+}
+
 static position singleRotateWithLeft(position K2){
-    
+    position K1;
+    K1 = K2->left;
+    K2->left = K1->right;
+    K1->right = K2;
+    K2->height = maxInt(height(K2->left),height(K2->right)) + 1;
+    K1->height = maxInt(height(K1->left),height(K1->right)) + 1;
+    return K1;
 }
 
 static position singleRotateWithRight(position K2){
-
+    position K1;
+    K1 = K2->right;
+    K2->right = K1->left;
+    K1->left = K2;
+    K2->height = maxInt(height(K2->left),height(K2->right)) + 1;
+    K1->height = maxInt(height(K1->left),height(K1->right)) + 1;
+    return K1;
 }
 
 static position doubleRotateWithLeft(position K3){
-
+    K3->left = singleRotateWithRight(K3->left);
+    return singleRotateWithLeft(K3);
 }
 
 static position doubleRotateWithRight(position K3){
-
+    K3->right = singleRotateWithLeft(K3->right);
+    return singleRotateWithRight(K3);
 }
 
 avlTree insert(elementType X, avlTree T){
