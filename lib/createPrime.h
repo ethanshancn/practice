@@ -9,4 +9,7 @@
 #ifndef PRACTICE_CREATEPRIME_H
 #define PRACTICE_CREATEPRIME_H
 
+typedef unsigned char byte;
+
+
 #endif //PRACTICE_CREATEPRIME_H
