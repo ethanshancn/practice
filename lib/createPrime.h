@@ -11,5 +11,11 @@
 
 typedef unsigned char byte;
 
+byte * initContainer(int totalSize);    //Malloc and remember to free
+
+int bytePosition(int nowLocation);
+
+byte newByte(byte nowByte,int bytePos);
+
 
 #endif //PRACTICE_CREATEPRIME_H

@@ -7,3 +7,15 @@
 //
 
 #include "createPrime.h"
+
+byte * initContainer(int totalSize){
+    int
+}
+
+int bytePosition(int nowLocation){
+
+}
+
+byte newByte(byte nowByte,int bytePos){
+
+}
