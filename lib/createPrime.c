@@ -9,7 +9,7 @@
 #include "createPrime.h"
 
 byte * initContainer(int totalSize){
-    int
+    int mainNum = totalSize >> 3;
 }
 
 int bytePosition(int nowLocation){
