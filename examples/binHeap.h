@@ -9,11 +9,14 @@
 #ifndef PRACTICE_BINHEAP_H
 #define PRACTICE_BINHEAP_H
 
+#include <stdlib.h>
+#include <stdio.h>
+
 struct heapStruct;
 typedef struct heapStruct *priorityQueue;
 typedef int elementType;
 
-priorityQueue initialize(int maxElement);
+priorityQueue initialize(int totalNum);
 void destroy(priorityQueue H);
 void makeEmpty( priorityQueue H);
 void insert (elementType X, priorityQueue H);
