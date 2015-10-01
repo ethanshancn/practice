@@ -40,7 +40,17 @@ void destoryTable(hashTable H){
 }
 
 position find(elementType X, hashTable H){
+    position currentPos;
+    int collisionNum;
 
+    collisionNum = 0;
+    currentPos = hash(X,H->tableSize);
+    while (H->theCells[currentPos].info != empty && H->theCells[currentPos].content != X){
+        currentPos += 2 * ++collisionNum -1;
+        if(currentPos >= H->tableSize)
+            currentPos -= H->tableSize;
+    }
+    return currentPos;
 }
 
 void insert(elementType X, hashTable H){

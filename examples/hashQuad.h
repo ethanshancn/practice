@@ -26,6 +26,7 @@ void destoryTable(hashTable H);
 position find(elementType X, hashTable H);
 void insert(elementType X, hashTable H);
 hashTable rehash(hashTable H);
+int hash(int key,int tableSize);
 
 #endif //PRACTICE_HASHQUAD_H
 
