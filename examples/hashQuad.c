@@ -54,7 +54,12 @@ position find(elementType X, hashTable H){
 }
 
 void insert(elementType X, hashTable H){
-
+    position  pos;
+    pos = find(X,H);
+    if(H->theCells[pos].info != legitimate){
+        H->theCells[pos].info = legitimate;
+        H->theCells[pos].content = X;
+    }
 }
 
 hashTable rehash(hashTable H){
