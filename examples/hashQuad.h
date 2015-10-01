@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "../lib/createPrime.h"
 
 typedef unsigned int index;
 typedef index position;
