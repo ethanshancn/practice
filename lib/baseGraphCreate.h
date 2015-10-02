@@ -9,4 +9,11 @@
 #ifndef PRACTICE_BASEGRAPHCREATE_H
 #define PRACTICE_BASEGRAPHCREATE_H
 
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+
+
 #endif //PRACTICE_BASEGRAPHCREATE_H
