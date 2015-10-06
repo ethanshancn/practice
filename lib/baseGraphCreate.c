@@ -65,3 +65,36 @@ position find(char * content, hashTable H){
     return P;
 }
 
+void insert(char * newContent, hashTable H){
+    position pos,newCell;
+    list L;
+    pos = find(newContent,H);
+    if(pos != NULL)
+        return;
+
+    newCell = malloc(sizeof(struct listNode));
+    if(newCell == NULL){
+        printf("Out of space!\n");
+        return;
+    }
+    L = H->theList[hash(newContent, H->tableSize)];
+    newCell->next = L->next;
+    newCell->content = newContent;
+    L->next = newCell;
+}
+
+void delete(char * oldContent,hashTable H){
+    position preCell,oldCell;
+    list L;
+
+    L = H->theList[hash(oldContent, H->tableSize)];
+    preCell = L;
+    while (preCell->next != NULL && strcmp(preCell->next->content,oldContent) != 0)
+        preCell = preCell->next;
+    if(preCell->next)
+        return;
+    oldCell = preCell->next;
+    preCell->next = preCell->next->next;
+    free(oldCell);
+}
+/************ HASH TABLE END ************/
