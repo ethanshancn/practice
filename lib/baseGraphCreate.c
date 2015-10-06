@@ -65,7 +65,7 @@ position find(char * content, hashTable H){
     return P;
 }
 
-void insert(char * newContent, hashTable H){
+void insert(char * newContent, int newVNum, hashTable H){
     position pos,newCell;
     list L;
     pos = find(newContent,H);
@@ -80,6 +80,7 @@ void insert(char * newContent, hashTable H){
     L = H->theList[hash(newContent, H->tableSize)];
     newCell->next = L->next;
     newCell->content = newContent;
+    newCell->vNum = newVNum;
     L->next = newCell;
 }
 
@@ -98,3 +99,4 @@ void delete(char * oldContent,hashTable H){
     free(oldCell);
 }
 /************ HASH TABLE END ************/
+
