@@ -65,23 +65,24 @@ position find(char * content, hashTable H){
     return P;
 }
 
-void insert(char * newContent, int newVNum, hashTable H){
+position insert(char * newContent, int newVNum, hashTable H){
     position pos,newCell;
     list L;
     pos = find(newContent,H);
     if(pos != NULL)
-        return;
+        return NULL;
 
     newCell = malloc(sizeof(struct listNode));
     if(newCell == NULL){
         printf("Out of space!\n");
-        return;
+        return NULL;
     }
     L = H->theList[hash(newContent, H->tableSize)];
     newCell->next = L->next;
     newCell->content = newContent;
     newCell->vNum = newVNum;
     L->next = newCell;
+    return newCell;
 }
 
 void delete(char * oldContent,hashTable H){
@@ -99,4 +100,78 @@ void delete(char * oldContent,hashTable H){
     free(oldCell);
 }
 /************ HASH TABLE END ************/
+//生成随机字符串
+char* createRandString(){
+    int i = 0, length = creatRandomInt(1,15);
+    char *string;
+    string = (char *)malloc(sizeof(char) * (length + 1));
+    for (int i = 0; i < length; ++i) {
+        string[i] = creatRandomInt(97,122);
+    }
+    string[length] = '\0';
+    return string;
+};
 
+/************ GRAPHY START ************/
+
+struct adjaNode{
+    int thisNum;
+    adjaPos next;
+};
+
+graph initGraph(int graphSize){
+    graph totalGraph = malloc(sizeof(adjaPos) * graphSize);
+    int i;
+    for (int i = 0; i < graphSize; ++i) {
+        totalGraph[i] = malloc(sizeof(struct adjaNode));
+        totalGraph[i]->thisNum = -1;
+        totalGraph[i]->next = NULL;
+    }
+    return totalGraph;
+}
+
+void addAdjaNode(graph G, int vNum, int newKey){
+    adjaPos tmp,newCell;
+    tmp = G[vNum];
+    while (tmp->next != NULL){
+        if(tmp->thisNum != -1 && tmp->thisNum == newKey)
+            return;
+        tmp = tmp->next;
+    }
+    newCell = malloc(sizeof(struct adjaNode));
+    newCell->thisNum = newKey;
+    newCell->next = NULL;
+    tmp->next = newCell;
+}
+
+//由数字索引查名称
+list *globalContent;
+//由名称查数字索引
+hashTable vertexTable;
+
+//主程序
+graph createRandGraph(int graphSize){
+    int vNum = 1;
+    hashTable vertexTable = initHashTable(1024);
+
+
+
+
+    /*
+     * 1、递增vNum
+     * 2、查找hash表是否已存在
+     * 3、插入hash表
+     * 4、增加数组
+     * 5、随机创建连接以创建图
+     * 6、返回图
+     */
+
+
+
+
+}
+
+//返回实际名称
+char * getContent(int vNum){
+
+}
