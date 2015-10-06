@@ -26,6 +26,8 @@ struct adjaNode;
 typedef struct adjaNode *adjaPos;
 typedef adjaPos *graph;
 
+#define TOTAL_VNUM 200
+
 graph createRandGraph(int graphSize);
 
 #endif //PRACTICE_BASEGRAPHCREATE_H

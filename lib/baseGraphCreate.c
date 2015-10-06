@@ -145,33 +145,41 @@ void addAdjaNode(graph G, int vNum, int newKey){
 }
 
 //由数字索引查名称
-list *globalContent;
+position *globalContent;
 //由名称查数字索引
 hashTable vertexTable;
 
 //主程序
 graph createRandGraph(int graphSize){
-    int vNum = 1;
-    hashTable vertexTable = initHashTable(1024);
-
-
-
-
-    /*
-     * 1、递增vNum
-     * 2、查找hash表是否已存在
-     * 3、插入hash表
-     * 4、增加数组
-     * 5、随机创建连接以创建图
-     * 6、返回图
-     */
-
-
-
-
+    int vNum = 0;
+    vertexTable = initHashTable(104);
+    globalContent = malloc(sizeof(position) * TOTAL_VNUM);
+    //生成随机字符串以插入
+    while (vNum < TOTAL_VNUM){
+        position insertedCell = insert(createRandString(),++vNum,vertexTable);
+        if(insertedCell == NULL){
+            vNum --;
+            continue;
+        }
+        globalContent[vNum] = insertedCell;
+    }
+    int i = 0;
+    graph resultGraph = initGraph(TOTAL_VNUM);
+    while (i < TOTAL_VNUM){
+        int j = 0, y = creatRandomInt(0,10);
+        while (j++ < y){
+            addAdjaNode(resultGraph,i,creatRandomInt(0,TOTAL_VNUM));
+        }
+    }
+    return resultGraph;
 }
 
 //返回实际名称
 char * getContent(int vNum){
+
+}
+
+//返回vnum
+int getVNum(char *content){
 
 }
