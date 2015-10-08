@@ -16,6 +16,9 @@ int main(int argc, char **agrv){
     printIntArray(arrData,totalNum);    //打印数组*/
 
 
+
+    createRandGraph();
+
     return 0;
 }
 

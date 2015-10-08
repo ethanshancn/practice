@@ -14,6 +14,7 @@
 #include "./lib/printArray.h"
 #include "./lib/gcd.h"
 #include "./lib/createPrime.h"
+#include "./lib/baseGraphCreate.h"
 
 //#include "./examples/maxSubSequenceSum.h"   /／最大子序列和
 //#include "./examples/sortProblem.h" /／排序问题

@@ -150,7 +150,7 @@ position *globalContent;
 hashTable vertexTable;
 
 //主程序
-graph createRandGraph(int graphSize){
+graph createRandGraph(){
     int vNum = 0;
     vertexTable = initHashTable(104);
     globalContent = malloc(sizeof(position) * TOTAL_VNUM);

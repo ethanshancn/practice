@@ -28,6 +28,6 @@ typedef adjaPos *graph;
 
 #define TOTAL_VNUM 200
 
-graph createRandGraph(int graphSize);
+graph createRandGraph();
 
 #endif //PRACTICE_BASEGRAPHCREATE_H
