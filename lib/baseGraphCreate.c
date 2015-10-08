@@ -19,12 +19,12 @@ struct hashTbl{
 };
 
 //散列函数
-unsigned int hash(char * content, int tableSize){
+unsigned int hash(const char * content, int tableSize){
     unsigned int hashVal = 0;
-    while (content != '\0'){
+    while (*content != '\0'){
         hashVal = (hashVal << 5) + *content++;
-        return hashVal%tableSize;
     }
+    return hashVal%tableSize;
 }
 
 hashTable initHashTable(int tableSize){
@@ -170,6 +170,7 @@ graph createRandGraph(){
         while (j++ < y){
             addAdjaNode(resultGraph,i,creatRandomInt(0,TOTAL_VNUM));
         }
+        i++;
     }
     return resultGraph;
 }
